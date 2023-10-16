@@ -68,7 +68,7 @@ function TourSearchForm() {
             "--col-xl-gutter-y": "13px",
             "--col-xxl-gutter-y": "13px",
          }}
-         className={cx("tour-search-form", "grid wide")}
+         className={cx("tour-search-form TourSearchForm_tour-search-form__wOvKW", "grid wide")}
       >
          <div className={cx("tour-search-wrapper")}>
             <div

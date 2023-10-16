@@ -127,7 +127,7 @@ function Header({ ...props }, ref) {
    return (
       <>
          <div ref={wrapperRef} className={wrapperClassName}>
-            <div className={cx("container-grid", "grid wide")}>
+            <div className={cx("container-grid Header_container-grid__eZZHO", "grid wide")}>
                <header className={cx("container")}>
                   <Image
                      className={cx("logo")}

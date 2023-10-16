@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 function Footer() {
    return (
       <div className={cx("wrapper")}>
-         <div className={cx("grid-wrapper", "grid wide")}>
+         <div className={cx("grid-wrapper Footer_grid-wrapper__TmET8", "grid wide")}>
             <div className={cx("main")}>
                <div
                   className={cx(

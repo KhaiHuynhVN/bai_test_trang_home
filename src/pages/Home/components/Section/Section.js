@@ -33,7 +33,7 @@ function Section({ title, subTitle, CardComponent, gridRowClassName, datas, wrap
                   "--col-xl-gutter-y": "0",
                   "--col-xxl-gutter-y": "0",
                }}
-               className={cx("container-grid", "grid wide")}
+               className={cx("container-grid Section_container-grid__uKItq", "grid wide")}
             >
                <div className={gridRowClassName}>
                   {CardComponent &&
