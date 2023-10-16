@@ -1,0 +1,32 @@
+.wrapper {
+   position: fixed;
+   inset: 0;
+   cursor: pointer;
+   animation: hide 0.3s ease forwards;
+   pointer-events: none;
+   z-index: 9999;
+}
+
+.wrapper.show {
+   display: block;
+   animation: show 0.3s ease forwards;
+   pointer-events: all;
+}
+
+@keyframes show {
+   from {
+      backdrop-filter: blur(0px);
+   }
+   to {
+      backdrop-filter: blur(10px);
+   }
+}
+
+@keyframes hide {
+   from {
+      backdrop-filter: blur(10px);
+   }
+   to {
+      backdrop-filter: blur(0px);
+   }
+}

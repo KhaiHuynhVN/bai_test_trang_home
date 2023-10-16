@@ -1,0 +1,57 @@
+@import "normalize.css";
+
+:root {
+   --font-family: Poppins, Helvetica, Arial, sans-serif;
+   --header-height: 75px;
+   --header-background-height: 800px;
+   --right-menu-width: 360px;
+   // color
+   --primary-color: #ff4a52;
+   --primary-color-hover: #1ec6b6;
+   --primary-color-active: #1ec6b6;
+}
+
+::selection {
+   background-color: #222222;
+   color: white;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   text-rendering: optimizeSpeed;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: var(--font-family);
+   font-size: 1.6rem;
+   line-height: 1.7;
+   text-rendering: optimizeSpeed;
+   -webkit-font-smoothing: antialiased;
+   word-wrap: break-word;
+}
+
+button,
+input {
+   font-family: var(--font-family);
+   outline: none;
+   border: none;
+   background: transparent;
+}
+
+a[href] {
+   text-decoration: none;
+}
+
+@media (max-width: 767px) {
+   :root {
+      --header-background-height: 600px;
+      --right-menu-width: 270px;
+      --header-height: 65px;
+   }
+}

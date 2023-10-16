@@ -1,0 +1,32 @@
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   background: white;
+
+   span {
+      text-align: center;
+   }
+}
+
+.image-wrapper {
+   padding: 10.5px 0 19.5px 0;
+}
+
+.image {
+   display: block;
+   width: 150px;
+   height: 150px;
+   margin: 0 auto;
+}
+
+.title {
+   font-size: 2rem;
+   font-weight: 700;
+}
+
+.content {
+   flex: 1;
+   padding: 10.5px 0 19.5px 0;
+   font-size: 1.5rem;
+}

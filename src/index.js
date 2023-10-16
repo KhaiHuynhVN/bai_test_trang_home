@@ -1,14 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import GlobalStyle from "./components/GlobalStyle";
+import GridSystem from "./components/GridSystem";
+import { store } from "./store";
+
+import "./font-awesome-pro-v6-6.2.0/css/all.min.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+   <React.StrictMode>
+      <Provider store={store}>
+         <GlobalStyle>
+            <GridSystem>
+               <App />
+            </GridSystem>
+         </GlobalStyle>
+      </Provider>
+   </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,39 @@
+.wrapper {
+   position: fixed;
+   right: calc(-1 * var(--right-menu-width));
+   top: 0;
+   height: 100%;
+   width: var(--right-menu-width);
+   padding: 35px 40px;
+   background: rgba(255, 255, 255, 0.85);
+   overflow-y: auto;
+   transition: 0.3s ease;
+   z-index: 10000;
+}
+
+.wrapper.show {
+   right: 0;
+}
+
+.close-btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+   margin-left: auto;
+   border-radius: 50%;
+   background: var(--primary-color);
+   box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.15);
+   cursor: pointer;
+   transition: 0.2s;
+
+   &:hover {
+      transform: translateY(-4px);
+   }
+
+   i {
+      font-size: 2.5rem;
+      color: white;
+   }
+}

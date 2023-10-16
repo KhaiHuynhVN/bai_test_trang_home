@@ -1,0 +1,160 @@
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   position: relative;
+   border: 1px solid #dce0e0;
+   border-radius: 5px;
+   transition: 0.3s ease;
+
+   &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+
+      .price-container {
+         transform: scale(1.2);
+      }
+   }
+}
+
+.sale-sticker {
+   --size: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   right: calc((-1 * var(--size) / 2) + 5px);
+   top: calc((-1 * var(--size) / 2 + 5px));
+   width: var(--size);
+   height: var(--size);
+   background: #1ec6b6;
+   color: white;
+   font-size: 1.2rem;
+   border-radius: 50%;
+}
+
+.background {
+   display: flex;
+   width: 100%;
+   height: clamp(207px, 18vw, 260px);
+   background-image: var(--background-image);
+   background-position: center;
+   background-size: cover;
+   border-top-right-radius: inherit;
+   border-top-left-radius: inherit;
+}
+
+.price-container {
+   margin-top: auto;
+   margin-bottom: 10px;
+   padding: 3px 10px 2px 10px;
+   background: var(--primary-color);
+   color: white;
+   transform-origin: left;
+   transition: 0.2s ease;
+}
+
+.price {
+   font-size: 1.6rem;
+   font-weight: 700;
+}
+
+.normal-price {
+   margin-right: 5px;
+   font-size: 1.3rem;
+   font-weight: 400;
+   text-decoration: line-through;
+   opacity: 0.6;
+}
+
+.content-container {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   margin-top: auto;
+   padding: 15px 15px 15px 15px;
+}
+
+.title {
+   color: black;
+   font-size: 2rem;
+   font-weight: 700;
+}
+
+.sub-title {
+   display: block;
+   padding: 9px 0 17px 0;
+   font-size: 1.3rem;
+}
+
+.attributes {
+   display: flex;
+   align-items: flex-start;
+   margin-top: auto;
+}
+
+.rating {
+   display: flex;
+   align-items: center;
+}
+
+.star-container {
+   display: flex;
+   align-items: center;
+
+   i {
+      font-size: 1.2rem;
+      color: #1ec6b6;
+
+      & + & {
+         margin-left: 3px;
+      }
+   }
+}
+
+.reviews {
+   margin-left: 3px;
+   font-size: 1.2rem;
+}
+
+.date {
+   position: relative;
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+   font-size: 1.2rem;
+
+   i {
+      margin-right: 3px;
+   }
+}
+
+@media (max-width: 795px) {
+   .rating {
+      display: block;
+   }
+
+   .date {
+      bottom: 4px;
+   }
+}
+
+@media (max-width: 1100px) {
+   .background {
+      height: clamp(138px, 22vw, 207px);
+   }
+}
+
+@media (max-width: 767px) {
+   .background {
+      height: clamp(138px, 61.2vw, 467px);
+   }
+
+   .rating {
+      display: flex;
+   }
+
+   .date {
+      bottom: 0;
+   }
+}

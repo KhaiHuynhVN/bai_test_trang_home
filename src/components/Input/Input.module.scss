@@ -1,0 +1,25 @@
+.wrapper {
+   display: flex;
+   align-items: center;
+   background: white;
+   border-radius: 5px;
+   border: 1px solid #dce0e0;
+}
+
+.input {
+   flex: 1;
+   max-width: calc(100% - (var(--icon-width) + 10px)); // 20px: icon width + margin
+   padding: 11.5px;
+   font-size: 1.5rem;
+   border-radius: inherit;
+}
+
+.icon {
+   display: block;
+   flex-shrink: 0;
+   color: black;
+}
+
+.right-icon {
+   margin-right: 10px;
+}

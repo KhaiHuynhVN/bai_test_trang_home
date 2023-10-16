@@ -1,0 +1,89 @@
+.header {
+   position: relative;
+   height: var(--header-background-height);
+}
+
+.header-background {
+   position: absolute;
+   inset: 0;
+   user-select: none;
+
+   iframe {
+      position: fixed;
+      inset: 0px;
+      width: 1488px;
+      height: 1237px;
+      margin-top: -181.5px;
+      transform: translate3d(0px, -18.5px, 0px);
+      z-index: -1;
+   }
+}
+
+.header-content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   background: rgb(0, 0, 0, 0.3);
+   color: white;
+
+   .header-content-container {
+      width: 100%;
+   }
+}
+
+.title {
+   text-align: center;
+   font-size: 3.6rem;
+   font-weight: 700;
+}
+
+.sub-title {
+   display: block;
+   text-align: center;
+   font-size: 1.5rem;
+}
+
+.body {
+   display: flex;
+   flex-direction: column;
+   padding-top: 70px;
+   background: white;
+   // overflow: hidden;
+   // Dùng flex hoặc overflow: hidden để làm cho thẻ này được kéo dãn ra khi thẻ con bên trong nó margin
+   // vượt quá phạm vi của thẻ này
+}
+
+.parallax {
+   height: 536.4px;
+   margin-bottom: 70px;
+   background-image: url("https://themes-themegoods.b-cdn.net/grandtour/demo/wp-content/uploads/2016/12/pexels-photo-24377.jpg");
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
+}
+
+.blog-section {
+   margin-bottom: -25px;
+}
+
+@media (max-width: 769px) {
+   .tour-advance-search-wrapper {
+      &.show {
+         margin-top: 11px;
+      }
+   }
+
+   .title {
+      font-size: 2.4rem;
+   }
+}
+
+@media (max-width: 500px) {
+   .header-content {
+      .header-content-container {
+         margin-top: 50px;
+      }
+   }
+}

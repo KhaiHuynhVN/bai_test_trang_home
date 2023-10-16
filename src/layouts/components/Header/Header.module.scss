@@ -1,0 +1,135 @@
+.wrapper {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: var(--header-height);
+   opacity: 0;
+   background-color: transparent;
+   transform: translateY(-100%);
+   transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
+   z-index: 9998;
+
+   &.showOpacity {
+      opacity: 1;
+   }
+
+   &.showTranslate {
+      transform: translate(0);
+   }
+
+   &.showBackground {
+      background-color: white;
+
+      .navbar ul li a {
+         color: black;
+
+         &[aria-current="page"] {
+            color: var(--primary-color);
+         }
+      }
+
+      .right-button {
+         i {
+            color: black;
+         }
+      }
+   }
+
+   .navbar ul li a {
+      color: white;
+   }
+
+   .right-button {
+      i {
+         color: white;
+      }
+   }
+}
+
+.container-grid {
+   background: transparent;
+}
+
+.container {
+   display: flex;
+   width: 100%;
+
+   .logo {
+      width: 92px;
+      height: var(--header-height);
+      object-fit: contain;
+   }
+}
+
+.navbar {
+   margin-left: auto;
+
+   & > ul {
+      display: flex;
+   }
+}
+
+.right-button {
+   display: flex;
+   align-items: center;
+   margin-left: 5px;
+
+   i {
+      font-size: 1.3rem;
+   }
+}
+
+.menu-icon {
+   cursor: pointer;
+}
+
+.cart-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   width: 30px;
+   height: 30px;
+   margin-left: 5px;
+
+   i {
+      font-size: 1.4rem;
+   }
+
+   span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      width: 16px;
+      height: 16px;
+      background: red;
+      border-radius: 1000px;
+      color: white;
+      font-size: 1rem;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+   .container {
+      .logo {
+         margin-left: 30px;
+      }
+   }
+}
+
+@media (max-width: 960px) {
+   .navbar {
+      display: none;
+   }
+
+   .right-button {
+      margin-left: auto;
+   }
+
+   .cart-container {
+      margin: 0 10px;
+   }
+}

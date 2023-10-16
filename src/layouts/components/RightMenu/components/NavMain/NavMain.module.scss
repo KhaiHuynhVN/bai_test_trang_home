@@ -1,0 +1,67 @@
+.wrapper {
+   margin-top: 15px;
+   margin-bottom: 40px;
+   overflow: hidden;
+}
+
+.content.readyPrev-animation {
+   animation: readyPrev 0.2s ease forwards;
+}
+
+.content.readyNext-animation {
+   animation: readyNext 0.2s ease forwards;
+}
+
+.content.prev-animation {
+   animation: prev 0.3s ease forwards;
+}
+
+.content.next-animation {
+   animation: next 0.3s ease forwards;
+}
+
+@keyframes readyPrev {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(100%);
+   }
+}
+
+@keyframes readyNext {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-100%);
+   }
+}
+
+@keyframes next {
+   from {
+      transform: translateX(100%);
+   }
+   to {
+      transform: translateX(0);
+   }
+}
+
+@keyframes prev {
+   from {
+      transform: translateX(-100%);
+   }
+   to {
+      transform: translateX(0);
+   }
+}
+
+.back-btn-container {
+   font-size: 1.4rem;
+   margin-bottom: 15px;
+   cursor: pointer;
+
+   &:hover {
+      color: var(--primary-color);
+   }
+}

@@ -1,0 +1,38 @@
+.wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.6rem;
+   font-weight: 700;
+   border-radius: 4px;
+   user-select: none;
+   cursor: pointer;
+   line-height: 22px;
+   border: 1.5px solid transparent;
+
+   + .wrapper {
+      margin-left: 12px;
+   }
+
+   &.disabled {
+      pointer-events: none;
+      opacity: 0.25;
+   }
+
+   span + span {
+      margin-left: 8px;
+   }
+}
+
+// button type
+.primary {
+   background: var(--primary-color);
+   color: white;
+
+   &:hover {
+      background: var(--primary-color-hover);
+   }
+   &:active {
+      background: var(--primary-color-active);
+   }
+}
